@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cruzadinha interativa para praticar conceitos de Arquitetura Computacional.">
+  <title>Desafio da Arquitetura | Cruzadinha</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="puzzle.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <p class="etiqueta">ARQUITETURA COMPUTACIONAL · SPRINT 3</p>
+      <h1>Desafio da Arquitetura</h1>
+      <p class="subtitulo">Descubra os conceitos, uma palavra de cada vez.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="resumo">
+      <div><h2>Como jogar</h2><p>Escolha uma pista, preencha as casas e confira sua resposta. Se errar, você pode corrigir e tentar novamente.</p></div>
+      <div class="progresso"><span>Palavras corretas</span><strong id="contador">0 de 12</strong></div>
+    </section>
+
+    <section class="layout-jogo">
+      <section class="painel tabuleiro-painel">
+        <div class="titulo-painel"><h2>Tabuleiro</h2><span>Selecione uma pista para começar</span></div>
+        <div class="tabuleiro-rolagem"><div id="tabuleiro" class="tabuleiro" aria-label="Tabuleiro da cruzadinha"></div></div>
+        <div class="acoes">
+          <button id="conferir-palavra" class="botao principal" type="button">Conferir palavra</button>
+          <button id="conferir-todas" class="botao secundario" type="button">Conferir todas</button>
+          <button id="reiniciar" class="botao discreto" type="button">Reiniciar</button>
+        </div>
+        <p id="mensagem" class="mensagem" aria-live="polite">Selecione uma pista para ver o enunciado.</p>
+      </section>
+
+      <aside class="painel painel-pistas">
+        <div class="titulo-painel"><h2>Pistas</h2><span>Clique em uma para selecioná-la</span></div>
+        <div class="pista-atual" aria-live="polite">
+          <div class="pista-atual-topo"><span id="tipo-pista">NENHUMA SELECIONADA</span><span id="numero-pista"></span></div>
+          <p id="enunciado">A pista escolhida aparecerá aqui.</p>
+          <span id="status-pista" class="status">Aguardando resposta</span>
+        </div>
+        <div class="listas-pistas">
+          <div><h3>Horizontais</h3><div id="pistas-horizontais" class="botoes-pistas"></div></div>
+          <div><h3>Verticais</h3><div id="pistas-verticais" class="botoes-pistas"></div></div>
+        </div>
+        <p class="instrucao-pistas">A pista fica em destaque enquanto você preenche a palavra. Nas casas compartilhadas, use os botões de pistas para alternar entre as direções.</p>
+      </aside>
+    </section>
+    <footer>Desafio de Arquitetura Computacional · Jogo educativo</footer>
+  </main>
+</body>
+</html>
