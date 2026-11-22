@@ -30,4 +30,4 @@ Jogo de cruzadinha para praticar conceitos de Arquitetura Computacional.
 ## Tecnologias
 - HTML
 - CSS
-- JavaScript puro
+- JavaScript
